@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+      <html lang="en" dir="ltr">
+      <head>
+      <meta charset="utf-8">
+      <title></title>
+      </head>
+      <body>
+      <h1>Calculator</h1>
+      </h3>
+      <input type="text" id="1NO" name="TB1" value="">
+      and
+
+      <input type="text" id="2NO" name="TB2" value="">
+      <br>
+      Result:
+      <br>
+      <input type="text" id="result"name="TB3" value="">
+      <br>
+      <br>
+      <button type="button" name="button" onclick="add()">+</button>
+      <button type="button" name="button" onclick="subtract()">-</button>
+      <button type="button" name="button" onclick="Multiply()">x</button>
+      <button type="button" name="button" onclick="Divide()">/</button>
+      <br>
+      <br>
+      <br>
+      <button type="button" name="button" onclick="clear()">Clear (In Progress)</button>
+      <script type="text/javascript">
+     function add() {
+    var num1 = document.getElementById("1NO").value;
+    var num2 = document.getElementById("2NO").value;
+    var result = parseInt(num1) + parseInt(num2);
+    document.getElementById("result").value = result;
+    }
+     function subtract() {
+    var num1 = document.getElementById("1NO").value;
+    var num2 = document.getElementById("2NO").value;
+    var result = parseInt(num1) - parseInt(num2);
+    document.getElementById("result").value = result;
+    }
+     function Divide() {
+    var num1 = document.getElementById("1NO").value;
+    var num2 = document.getElementById("2NO").value;
+    var result = parseInt(num1) / parseInt(num2);
+    document.getElementById("result").value = result;
+    if (num2 == 0) {
+    // executed if num2 is 0
+    //alert('cannot divide by zero!');
+    document.getElementById("error").innerHTML = "Cannot divide by zero!";
+    }
+    else {
+    //executed if num2 is NOT 0
+
+    }
+    }
+     function Multiply() {
+    var num1 = document.getElementById("1NO").value;
+    var num2 = document.getElementById("2NO").value;
+    var result = parseInt(num1) * parseInt(num2);
+    document.getElementById("result").value = result;
+    }
+
+    </script>
+    </body>
+    </html>
